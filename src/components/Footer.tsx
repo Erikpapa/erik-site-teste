@@ -1,66 +1,63 @@
 import React from 'react';
-import { BookOpen, ShieldCheck, Lock, Heart } from 'lucide-react';
-import { COURSE_INFO } from '../data/courseData';
+import { BookOpen } from 'lucide-react';
+import { BRAND_INFO } from '../data/courseData';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#261E1B] text-[#DDD2CA] pt-14 pb-20 sm:pb-14 border-t border-[#3B2F2B]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <footer className="bg-[#173F38] text-[#FFF9F0] pt-16 pb-24 sm:pb-16 border-t border-[#102C27]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-white/10 text-center md:text-left">
-          
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-[#9E8581] text-white flex items-center justify-center">
-                <BookOpen className="w-4 h-4" />
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+          {/* Brand Presentation */}
+          <div className="space-y-2 max-w-sm">
+            <div className="flex items-center justify-center md:justify-start gap-2.5">
+              <div className="w-8 h-8 rounded-full bg-[#FFF9F0] text-[#173F38] flex items-center justify-center">
+                <BookOpen className="w-4 h-4 text-[#C56F4D]" />
               </div>
-              <span className="font-serif-title text-lg font-bold text-white tracking-wide">
-                Filipenses Quatro Oito
+              <span className="font-serif-title text-xl font-semibold tracking-tight text-[#FFF9F0]">
+                {BRAND_INFO.brandName}
               </span>
             </div>
-            <p className="text-xs text-[#A89890] max-w-sm">
-              Encorajando mulheres a aplicarem o evangelho na vida real por meio da leitura cristã com propósito e comunidade.
+            <p className="text-xs text-[#FFF9F0]/80 leading-relaxed">
+              {BRAND_INFO.brandTagline}
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-[#C5B7AF]">
-            <a href="#topo" className="hover:text-white transition-colors">Início</a>
-            <a href="#problema" className="hover:text-white transition-colors">Por Que Ler?</a>
-            <a href="#aprender" className="hover:text-white transition-colors">Conteúdo</a>
-            <a href="#estrutura" className="hover:text-white transition-colors">Módulos</a>
-            <a href="#bonus" className="hover:text-white transition-colors">Bônus</a>
-            <a href="#investimento" className="hover:text-white transition-colors">Investimento</a>
-            <a 
-              href={COURSE_INFO.eduzzUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-amber-300 hover:text-amber-200 font-semibold"
-            >
-              Checkout Eduzz
+          {/* Quick Anchor Links */}
+          <div className="flex flex-wrap justify-center gap-6 text-xs text-[#FFF9F0]/80">
+            <a href="#desafio" className="hover:text-white transition-colors">
+              O Desafio
+            </a>
+            <a href="#metodo" className="hover:text-white transition-colors">
+              O Método
+            </a>
+            <a href="#modulos" className="hover:text-white transition-colors">
+              Módulos
+            </a>
+            <a href="#como-foi-pensado" className="hover:text-white transition-colors">
+              Como foi pensado
+            </a>
+            <a href="#inscricao" className="hover:text-white transition-colors">
+              Inscrição (R$ 27)
+            </a>
+            <a href="#duvidas" className="hover:text-white transition-colors">
+              Dúvidas
             </a>
           </div>
-
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-[#8A7B74]">
+        {/* Legal Disclaimer */}
+        <div className="pt-8 border-t border-white/10 space-y-4 text-center text-xs text-[#FFF9F0]/60 leading-relaxed max-w-3xl mx-auto">
           <p>
-            © {new Date().getFullYear()} Filipenses Quatro Oito • Todos os direitos reservados.
+            {BRAND_INFO.brandName} • {BRAND_INFO.productName}
           </p>
-
-          <div className="flex items-center justify-center gap-4 text-[11px]">
-            <span className="flex items-center gap-1 text-emerald-400">
-              <Lock className="w-3 h-3" /> SSL 256 bits
-            </span>
-            <span>•</span>
-            <span className="flex items-center gap-1 text-amber-200">
-              <ShieldCheck className="w-3 h-3" /> Plataforma Segura Eduzz
-            </span>
-          </div>
+          <p>
+            Aviso de responsabilidade: A leitura cristã e o método apresentado são ferramentas de apoio e discipulado pessoal. Os resultados dependem da dedicação, da constância e da aplicação prática de cada aluna no seu contexto individual. Pagamento e processamento seguros realizados através da plataforma Eduzz.
+          </p>
+          <p className="text-[11px] text-[#FFF9F0]/40">
+            © {new Date().getFullYear()} {BRAND_INFO.brandName}. Todos os direitos reservados.
+          </p>
         </div>
-
-        <p className="text-[10px] text-center text-[#695B54] mt-6 max-w-2xl mx-auto leading-relaxed">
-          Este site não é afiliado ao Facebook, Google ou qualquer entidade dessas redes. Os resultados podem variar de pessoa para pessoa e dependem da aplicação individual dos métodos ensinados.
-        </p>
 
       </div>
     </footer>

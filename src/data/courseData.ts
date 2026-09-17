@@ -1,205 +1,194 @@
-import { CourseModule, BonusItem, FaqItem, SocialNotification, OrderBump } from '../types';
+import { CourseModule, KitItem, FaqItem, MethodPillar } from '../types';
 
-export const COURSE_INFO = {
-  title: "Leitura Cristã Que Transforma",
-  subtitle: "Como aplicar o que você lê à sua vida com direção e profundidade",
-  ministry: "Filipenses Quatro Oito",
-  instructor: "Naná Castillo",
-  tagline: "Em menos de 2 horas, mude completamente a forma como você se relaciona com livros cristãos.",
+export const BRAND_INFO = {
+  brandName: "Vereda & Página",
+  brandTagline: "Leitura cristã com direção para a vida real.",
+  productName: "Da Página à Vida",
+  productShortDescription: "Um mini-curso prático para compreender, registrar e aplicar à vida aquilo que você lê.",
   price: 27.00,
   originalPrice: 67.00,
   installments: "3x de R$ 9,68",
   coupon: "MINI27",
   accessDays: 15,
   eduzzUrl: "https://sun.eduzz.com/Q9N58QNK01?cupom=MINI27&p=1",
+  supportEmailPlaceholder: "contato@veredaepagina.com.br",
 };
 
-export const PROBLEM_QUOTES = [
+export const REALITY_REFLECTIONS = [
   {
-    quote: "O que foi mesmo que eu aprendi?",
-    sub: "Você fecha a última página com a sensação de mente vazia, esquecendo quase tudo dias depois.",
+    title: "A sensação de mente vazia ao fechar a última página",
+    description: "Você investe horas lendo capítulos edificantes, mas semanas depois mal consegue lembrar os pontos essenciais ou explicar para alguém o que aprendeu.",
   },
   {
-    quote: "Por que eu nunca consigo aplicar o que li?",
-    sub: "A teoria parece inspiradora, mas no cotidiano real, você não sabe por onde começar a mudar.",
+    title: "O abismo entre se emocionar com o livro e mudar na prática",
+    description: "A leitura toca o coração no momento, mas na manhã seguinte as velhas reações na família, no trabalho e na oração continuam as mesmas.",
   },
   {
-    quote: "Foi lindo, mas não mudou minha vida em nada…",
-    sub: "A emoção do momento passa e a sua rotina cristã continua exatamente no mesmo lugar.",
+    title: "A culpa de acumular livros na estante sem constância",
+    description: "Você compra bons livros com sincero desejo de crescer, mas a rotina corrida e a falta de método transformam a estante em motivo de cobrança em vez de paz.",
   },
 ];
 
-export const FOR_WHOM = [
-  "Não lê nada porque nunca consegue chegar até o fim de um livro e, por isso, desistiu de tentar",
-  "Está cansada de ler por obrigação, culpa ou cobrança religiosa",
-  "Quer desenvolver uma leitura com mais intenção, presença e profundidade bíblica",
-  "Deseja aprender a refletir e aplicar o que lê nos relacionamentos, mente e vida real",
-  "Deseja viver uma vida cristã mais sólida, prática e verdadeiramente guiada pela Palavra",
+export const METHOD_PILLARS: MethodPillar[] = [
+  {
+    number: "01",
+    title: "Compreender",
+    subtitle: "Leitura com intenção e discernimento bíblico",
+    description: "Aprenda a desacelerar a leitura apressada para capturar o cerne do argumento do autor, discernindo o que é fundamento bíblico e o que conversa com o seu momento atual.",
+    practice: "Como ler atenta sem dispersar a mente a cada dois parágrafos.",
+  },
+  {
+    number: "02",
+    title: "Registrar",
+    subtitle: "Anotações inteligentes que fixam o essencial",
+    description: "Um método elegante de grifos, notas marginais e fichamentos em caderno de leitura. Sem excesso de papelada, apenas o que você precisa para consultar no futuro.",
+    practice: "Técnica dos 3 grifos conscientes e síntese em uma única frase reflexiva.",
+  },
+  {
+    number: "03",
+    title: "Aplicar",
+    subtitle: "Da reflexão para a mesa, a oração e os hábitos",
+    description: "O passo que quase ninguém ensina: como criar a ponte deliberada entre a tese do autor e o seu comportamento diário, suas palavras em casa e sua vida devocional.",
+    practice: "As 7 perguntas reflexivas de resposta prática imediata.",
+  },
 ];
 
-export const WHAT_YOU_LEARN = [
-  {
-    title: "Os 5 Pilares da Leitura Transformadora",
-    desc: "Propósito, direção, entendimento, prática e comunidade aplicados de forma simples.",
-  },
-  {
-    title: "Leitura com Propósito e Convicção",
-    desc: "Aprenda a escolher o livro certo para a sua estação atual, vencendo a leitura vazia por hábito.",
-  },
-  {
-    title: "Técnicas de Fixação & Anotações Práticas",
-    desc: "Métodos acessíveis para absorver os pontos-chave sem precisar ser uma acadêmica.",
-  },
-  {
-    title: "Como Fugir das Armadilhas Comuns",
-    desc: "Identifique e supere o erro de acumular conhecimento sem gerar frutos no dia a dia.",
-  },
-  {
-    title: "O Poder da Comunidade Cristã",
-    desc: "Descubra como caminhar com outras irmãs potencializa sua perseverança e crescimento.",
-  },
-  {
-    title: "Continuidade no Clube Fp4.8",
-    desc: "Um caminho contínuo de leitura bíblica guiada para você nunca mais se sentir desamparada.",
-  },
+export const FOR_WHOM_ITEMS = [
+  "Mulheres que desejam que suas leituras gerem frutos de maturidade espiritual e vida prática.",
+  "Quem sente que esquece rapidamente o conteúdo dos livros que acabou de ler.",
+  "Quem lê por obrigação ou culpa e deseja recuperar o prazer sereno de sentar com um bom livro.",
+  "Mulheres com rotinas intensas que precisam de um método simples, realizável em 15 ou 20 minutos por dia.",
+  "Quem quer aprender a dialogar com o texto cristão sob a ótica das Escrituras com discernimento.",
+];
+
+export const NOT_FOR_WHOM_ITEMS = [
+  "Quem busca bater metas vazias de ler dezenas de livros por ano sem absorver nada.",
+  "Quem procura resumos automáticos para fingir conhecimento em conversas.",
+  "Quem não está disposta a reservar breves momentos de pausa e reflexão honesta no dia a dia.",
 ];
 
 export const MODULES: CourseModule[] = [
   {
     id: 0,
-    badge: "Introdução",
-    title: "Por que só ler não transforma",
-    subtitle: "O descompasso entre absorver páginas e viver a verdade",
-    description: "Desmistifique a ideia de que ler muitos livros é sinônimo de maturidade espiritual e entenda o que realmente gera frutos práticos.",
-    duration: "12 min",
-    highlights: ["A armadilha da ilusão de conhecimento", "O ciclo da leitura passiva", "O ponto de virada na sua mente"]
+    badge: "Módulo Inicial",
+    title: "Por que ler mais não significa viver melhor",
+    subtitle: "Desarmando o ciclo da leitura passiva e da culpa por páginas lidas",
+    description: "Uma análise franca sobre a armadilha de acumular títulos sem assimilar a verdade. Compreenda o papel de um livro cristão como servo da sua caminhada com Deus e não como objeto de vaidade.",
+    duration: "14 min",
+    highlights: ["A ilusão do acúmulo de conhecimento", "O ciclo da leitura passiva", "O alinhamento do coração diante do livro"],
   },
   {
     id: 1,
-    badge: "Bloco 1",
-    title: "Leitura com Propósito",
-    subtitle: "Elimine a culpa e defina o 'porquê' de cada livro",
-    description: "Aprenda a alinhar suas leituras às necessidades espirituais do seu momento de vida presente.",
+    badge: "Módulo 1 • Direção",
+    title: "Como escolher o livro certo para a sua estação atual",
+    subtitle: "Critérios de discernimento e fim da leitura desordenada",
+    description: "Aprenda a diagnosticar as necessidades da sua estação de vida presente e a filtrar recomendações com sabedoria, selecionando leituras com autoridade bíblica e relevância real.",
     duration: "18 min",
-    highlights: ["Diagnóstico do seu momento espiritual", "Como definir objetivos reais de leitura", "Abandonar livros sem culpa"]
+    highlights: ["Diagnóstico do momento de vida pessoal", "Critérios para filtrar boas obras cristãs", "Como abandonar livros ruins sem peso na consciência"],
   },
   {
     id: 2,
-    badge: "Bloco 2",
-    title: "Leitura com Direção",
-    subtitle: "Como selecionar o que ler em meio a tantas opções",
-    description: "Filtros práticos e bíblicos para discernir recomendações e escolher títulos com autoridade teológica e relevância.",
-    duration: "16 min",
-    highlights: ["Curadoria de bons autores e editoras", "Filtro de discernimento bíblico", "Montando sua trilha anual"]
+    badge: "Módulo 2 • Compreensão",
+    title: "Leitura ativa: capturando o cerne sem se perder",
+    subtitle: "Vencendo o cansaço mental e a falta de foco ao ler",
+    description: "Técnicas acessíveis para manter a mente presente durante a leitura, identificando a tese central do capítulo e conectando cada ideia ao ensino das Escrituras.",
+    duration: "20 min",
+    highlights: ["Como identificar o argumento central", "O ritmo saudável de leitura por blocos", "A postura de diálogo ativo com o autor"],
   },
   {
     id: 3,
-    badge: "Bloco 3",
-    title: "Leitura com Entendimento",
-    subtitle: "Técnicas simples para reter e assimilar o conteúdo",
-    description: "Métodos de grifo, marginais inteligentes e síntese que garantem que o conteúdo permaneça com você.",
-    duration: "20 min",
-    highlights: ["O método dos 3 grifos conscientes", "Notas de rodapé que ativam a memória", "Como resumir em 1 frase"]
+    badge: "Módulo 3 • Registro",
+    title: "O método de grifos e notas conscientes",
+    subtitle: "Como marcar seus livros e manter um caderno vivo",
+    description: "Aprenda a fazer anotações que você realmente vai consultar depois. Sem poluir as páginas e sem criar burocracias: um sistema limpo de registro em margens e fichas pessoais.",
+    duration: "22 min",
+    highlights: ["O código de cores e sinais reflexivos", "Notas marginais que sintetizam capítulos", "Como estruturar seu caderno de leitura pessoal"],
   },
   {
     id: 4,
-    badge: "Bloco 4",
-    title: "Leitura com Aplicação",
-    subtitle: "Trazendo as lições para a mesa, a família e a oração",
-    description: "A ponte definitiva da reflexão para a prática: como transformar princípios lidos em ações diárias.",
-    duration: "22 min",
-    highlights: ["A matriz de aplicação pessoal", "Conectando o livro às Escrituras", "Oração deliberada de resposta"]
+    badge: "Módulo 4 • Aplicação",
+    title: "Da página para a mesa, a família e a oração",
+    subtitle: "A ponte deliberada entre a teoria e o cotidiano",
+    description: "O coração do curso: o passo a passo para transformar um princípio lido em oração de resposta, ajuste de conduta em relacionamentos e atitudes práticas no lar e no trabalho.",
+    duration: "24 min",
+    highlights: ["A matriz de aplicação pessoal", "Transformando insights em orações bíblicas", "O exercício prático das 24 horas"],
   },
   {
     id: 5,
-    badge: "Bloco 5",
-    title: "Leitura em Comunidade",
-    subtitle: "O poder de compartilhar experiências e percepções",
-    description: "Por que ler isoladamente enfraquece a constância e como a troca fraterna amplia seu crescimento espiritual.",
-    duration: "15 min",
-    highlights: ["Troca de perspectivas espirituais", "Responsabilidade mútua com leveza", "O ambiente seguro do Clube"]
+    badge: "Módulo 5 • Constância",
+    title: "Constância serena: um ritmo sustentável para a vida real",
+    subtitle: "Como ler sem exigir de si mesma uma rotina idealizada",
+    description: "Estratégias práticas para mães, profissionais e mulheres atarefadas encaixarem a leitura com naturalidade na semana, sem ansiedade e sem cobranças irreais.",
+    duration: "16 min",
+    highlights: ["A rotina dos 15 minutos intencionais", "Protegendo o tempo da leitura", "Como retomar o ritmo após dias atípicos"],
   },
   {
     id: 6,
-    badge: "Bloco 6",
-    title: "Convite Especial & Presente",
-    subtitle: "A continuação da sua jornada no Clube Fp4.8",
-    description: "Um presente exclusivo reservado para as alunas do mini-curso continuarem crescendo juntas com condições nunca antes abertas.",
-    duration: "10 min",
-    highlights: ["Acesso às condições para o Clube Fp4.8", "Liberação da mini-aula secreta", "Próximos passos práticos"]
+    badge: "Módulo Especial",
+    title: "A continuidade da jornada: caminhando acompanhada",
+    subtitle: "Próximos passos e o convite para o Clube Vereda & Página",
+    description: "Orientações finais para consolidar o hábito e uma condição especial e acolhedora para alunas que desejarem continuar a leitura guiada ao longo do ano.",
+    duration: "12 min",
+    highlights: ["O papel da comunidade na constância", "Como escolher sua próxima trilha", "Acesso às condições para o Clube"],
   },
 ];
 
-export const BONUSES: BonusItem[] = [
+export const KIT_VEREDA_INFO = {
+  title: "Kit Vereda de Aplicação",
+  tag: "Oferta opcional no checkout",
+  headline: "Quer tornar sua aplicação ainda mais simples?",
+  description: "No momento da compra, você poderá adicionar o Kit Vereda de Aplicação ao seu pedido. Ele reúne materiais complementares para registrar aprendizados, organizar sua rotina de leitura e acompanhar sua aplicação prática.",
+  subtext: "Materiais complementares para organizar seus registros, acompanhar sua evolução e colocar cada aprendizado em prática com mais facilidade.",
+};
+
+export const KIT_VEREDA_ITEMS: KitItem[] = [
   {
     id: 1,
-    tag: "BÔNUS 1 • PRÁTICO",
-    title: "Checklist: 7 Perguntas Para Aplicar o Que Você Lê",
-    format: "PDF Imprimível + Versão Mobile",
-    originalPrice: "R$ 37,00",
-    description: "Um guia de bolso para colocar ao lado do seu livro favorito. Responda a essas 7 perguntas ao final de cada capítulo e nunca mais esqueça o aprendizado.",
-    iconName: "CheckSquare",
-  },
-  {
-    id: 2,
-    tag: "BÔNUS 2 • MATERIAL DE APOIO",
     title: "Caderno de Anotações & Exercícios das Aulas",
-    format: "PDF Diagramado para Impressão",
-    originalPrice: "R$ 29,00",
-    description: "Folhas de trabalho estruturadas para você acompanhar cada bloco do mini-curso, preencher seus insights e criar seu plano de leitura pessoal.",
+    format: "Arquivo em PDF para impressão ou uso digital",
+    description: "Um material diagramado com cuidado editorial para acompanhar cada aula, sintetizar os pontos centrais e estruturar seus registros de leitura.",
     iconName: "FileText",
   },
   {
-    id: 3,
-    tag: "PRESENTE EXCLUSIVO • SÓ PARA ALUNAS",
-    title: "Mini-Aula Secreta: 5 Erros Que Atrapalham a Constância na Leitura",
-    format: "Aula Especial em Vídeo",
-    originalPrice: "R$ 47,00",
-    description: "Descubra como blindar seu tempo e vencer a procrastinação leitora. Liberada com exclusividade durante os 10 dias para quem avançar para o Clube Fp4.8.",
-    iconName: "Gift",
+    id: 2,
+    title: "Guia com as 7 Perguntas para Aplicação Prática",
+    format: "PDF diagramado para leitura rápida ou marcador de páginas",
+    description: "Um roteiro reflexivo conciso para deixar dentro do livro em leitura. Ao concluir qualquer capítulo, passe por essas perguntas para extrair frutos concretos para o seu dia a dia.",
+    iconName: "CheckSquare",
   },
-];
-
-export const ORDER_BUMP_DATA: OrderBump = {
-  id: "devocional-fp48",
-  title: "Sim! Adicionar o Caderno Devocional & Leitora Fp4.8 (Digital)",
-  price: 14.90,
-  originalPrice: 39.90,
-  description: "Template pronto em PDF de alta resolução com fichas de leitura, cronograma anual e guia de orações bíblicas. De R$ 39,90 por apenas R$ 14,90!",
-  selected: false
-};
-
-export const SOCIAL_NOTIFICATIONS: SocialNotification[] = [
-  { id: "1", name: "Ana Beatriz M.", city: "São Paulo, SP", timeAgo: "há 2 minutos", action: "garantiu o mini-curso" },
-  { id: "2", name: "Juliana Costa", city: "Belo Horizonte, MG", timeAgo: "há 4 minutos", action: "acabou de entrar via Pix" },
-  { id: "3", name: "Débora Silveira", city: "Curitiba, PR", timeAgo: "há 7 minutos", action: "iniciou as aulas do mini-curso" },
-  { id: "4", name: "Renata Farias", city: "Fortaleza, CE", timeAgo: "há 9 minutos", action: "garantiu a vaga por R$ 27" },
-  { id: "5", name: "Mariana Albuquerque", city: "Porto Alegre, RS", timeAgo: "há 12 minutos", action: "garantiu o acesso imediato" },
 ];
 
 export const FAQS: FaqItem[] = [
   {
-    question: "Como e quando recebo o acesso ao mini-curso?",
-    answer: "Imediatamente! Assim que o seu pagamento for aprovado (no Pix é instantâneo, no cartão leva segundos), você receberá um e-mail com seus dados de login e link direto para a área de membros exclusiva das alunas."
+    question: "Como recebo o acesso ao mini-curso após a inscrição?",
+    answer: "Imediatamente. Assim que a sua inscrição for confirmada pela plataforma Eduzz (no Pix ou no Cartão a confirmação ocorre em instantes), você receberá um e-mail com o link de acesso exclusivo e suas instruções para começar a assistir às aulas agora mesmo.",
   },
   {
     question: "Por quanto tempo terei acesso às aulas?",
-    answer: "Você terá 15 dias de acesso integral. O curso é rápido e direto ao ponto (menos de 2 horas de duração total), dividido em blocos curtos de 10 a 20 minutos. 15 dias é mais do que suficiente para você maratonar ou assistir com calma e já colocar em prática no seu próximo capítulo!"
+    answer: "Você terá 15 dias de acesso integral à área de membros. O mini-curso foi estruturado propositalmente de forma compacta (menos de 2 horas no total) em aulas de 12 a 24 minutos. Esse período de 15 dias é intencional: evita que as aulas fiquem esquecidas e impulsiona você a assistir, aplicar e colher resultados com foco.",
   },
   {
-    question: "Não tenho o hábito de ler e quase nunca termino um livro. Vai funcionar para mim?",
-    answer: "Com certeza! Esse mini-curso foi desenhado exatamente para quem sente que 'não nasceu para ler' ou que vive frustrada por parar no meio. Você vai aprender a desmistificar a leitura e encontrar um ritmo prazeroso e realista, sem culpa ou cobranças irreais."
+    question: "O que é o Kit Vereda de Aplicação mencionado?",
+    answer: "O Kit Vereda de Aplicação é uma oferta complementar e opcional disponível diretamente no checkout da Eduzz. Ele reúne materiais em PDF (Caderno de Anotações e Guia das 7 Perguntas) para quem deseja ter ferramentas prontas para registrar e organizar a rotina de leitura. Sua inclusão é totalmente voluntária na hora do pagamento.",
   },
   {
-    question: "Quais são as formas de pagamento disponíveis?",
-    answer: "Você pode pagar via Pix (com aprovação imediata), Cartão de Crédito (à vista ou parcelado em até 3x de R$ 9,68) ou Boleto bancário através da plataforma 100% segura da Eduzz."
+    question: "Não tenho o hábito de ler ou quase nunca chego ao fim de um livro. Esse curso serve para mim?",
+    answer: "Sim, exatamente para você. O mini-curso Da Página à Vida foi pensado para desmistificar a leitura e retirar o peso da culpa. Você não precisa ser acadêmica nem ter horas livres: o método ensina a começar com passos serenos e a valorizar a profundidade sobre a quantidade.",
   },
   {
-    question: "E se eu assistir e achar que não foi para mim?",
-    answer: "Você conta com nossa Garantia Incondicional de 7 Dias. Se por qualquer motivo você achar que o mini-curso não atendeu às suas expectativas, basta enviar um e-mail para o suporte e devolveremos 100% do seu dinheiro, sem perguntas e sem complicação."
+    question: "Quais são as opções de pagamento?",
+    answer: "Você pode realizar o pagamento via Pix (com liberação imediata) ou no Cartão de Crédito em até 3x de R$ 9,68 através da plataforma Eduzz, em ambiente seguro e criptografado.",
   },
   {
-    question: "O que é o Clube Fp4.8 que é mencionado no curso?",
-    answer: "O Clube Fp4.8 é a nossa comunidade contínua de leitura cristã e discipulado, liderada por Naná Castillo. Dentro do mini-curso, você receberá um convite especial com presente secreto para quem desejar continuar a caminhada de leitura acompanhada."
-  }
+    question: "Como funciona a garantia de 7 dias?",
+    answer: "Você tem 7 dias completos a partir da confirmação para assistir às aulas e experimentar o método. Se por qualquer razão você sentir que o conteúdo não agregou valor à sua vida, basta solicitar o reembolso pela própria plataforma Eduzz ou pelo suporte. O valor pago será 100% devolvido, com respeito e sem qualquer complicação.",
+  },
+  {
+    question: "O que é a Vereda & Página e como funciona o Clube?",
+    answer: "Vereda & Página é uma iniciativa dedicada à leitura cristã com direção para a vida real. O Clube é nossa comunidade contínua de acompanhamento e leitura compartilhada. Dentro do mini-curso, você receberá um convite especial para conhecer o Clube caso deseje seguir caminhando acompanhada.",
+  },
+  {
+    question: "Preciso comprar algum livro específico para fazer o curso?",
+    answer: "Não. Você pode aplicar o método com qualquer livro cristão que já tenha na sua estante ou cabeceira, inclusive com sua Bíblia ou a sua leitura devocional atual.",
+  },
 ];

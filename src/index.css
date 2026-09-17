@@ -1,37 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --color-warm-primary: #9E8581;
-  --color-warm-primary-dark: #7D6460;
-  --color-warm-bg: #FAF7F5;
-  --color-warm-cream: #F5EFEA;
-  --color-warm-card: #FFFFFF;
-  --color-warm-dark: #2C2420;
-  --color-warm-subtle: #8A7E78;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
+  
+  --color-vereda-green: #173F38;
+  --color-vereda-green-dark: #102C27;
+  --color-vereda-green-light: #20554C;
+  --color-vereda-terracotta: #C56F4D;
+  --color-vereda-terracotta-dark: #A95636;
+  --color-vereda-terracotta-light: #DE8664;
+  --color-vereda-ivory: #FFF9F0;
+  --color-vereda-sand: #F1E6D7;
+  --color-vereda-sand-dark: #DFD0BC;
+  --color-vereda-gold: #D3A84F;
+  --color-vereda-charcoal: #222725;
+  --color-vereda-muted: #596561;
 }
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  background-color: #FFF9F0;
+  color: #222725;
 }
 
 .font-serif-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
+  font-optical-sizing: auto;
 }
 
-/* Custom subtle animations */
-@keyframes pulse-subtle {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
+/* Editorial subtle styling */
+::selection {
+  background-color: #173F38;
+  color: #FFF9F0;
 }
-
-.animate-pulse-subtle {
-  animation: pulse-subtle 3s ease-in-out infinite;
-}
-

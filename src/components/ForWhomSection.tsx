@@ -1,92 +1,98 @@
-import React, { useState } from 'react';
-import { Check, UserCheck, ArrowRight, Heart } from 'lucide-react';
-import { FOR_WHOM } from '../data/courseData';
+import React from 'react';
+import { Check, X, UserCheck } from 'lucide-react';
+import { FOR_WHOM_ITEMS, NOT_FOR_WHOM_ITEMS, BRAND_INFO } from '../data/courseData';
 
-interface ForWhomSectionProps {
-  onOpenCheckout: () => void;
-}
-
-export const ForWhomSection: React.FC<ForWhomSectionProps> = ({ onOpenCheckout }) => {
-  const [checkedItems, setCheckedItems] = useState<number[]>([0, 1, 2]);
-
-  const toggleItem = (idx: number) => {
-    setCheckedItems(prev => 
-      prev.includes(idx) ? prev.filter(i => i !== idx) : [...prev, idx]
-    );
-  };
-
+export const ForWhomSection: React.FC = () => {
   return (
-    <section id="para-quem" className="py-16 sm:py-24 bg-[#FAF7F5]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+    <section className="py-20 sm:py-28 bg-[#FFF9F0] border-b border-[#F1E6D7]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#9E8581]/15 text-[#6B534F] text-xs font-bold tracking-wider uppercase mb-3">
-            <UserCheck className="w-3.5 h-3.5" />
-            Diagnóstico Pessoal
-          </span>
-          <h2 className="font-serif-title text-3xl sm:text-4xl font-extrabold text-[#2C2420] tracking-tight mb-3">
-            Este mini-curso é para você que:
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#173F38]/10 text-[#173F38] text-xs font-semibold tracking-wider uppercase">
+            <UserCheck className="w-3.5 h-3.5 text-[#C56F4D]" />
+            <span>Alinhamento de Expectativas</span>
+          </div>
+
+          <h2 className="font-serif-title text-2xl sm:text-3xl lg:text-4xl text-[#173F38] font-normal leading-tight">
+            Este mini-curso foi feito para o seu momento?
           </h2>
-          <p className="text-sm sm:text-base text-[#6C5E57]">
-            Marque os itens com os quais você se identifica para testar sua prontidão:
+
+          <p className="text-base text-[#596561] leading-relaxed">
+            Acreditamos na honestidade editorial. Queremos que cada aluna entre com clareza sobre o propósito da nossa jornada juntas.
           </p>
         </div>
 
-        {/* Interactive Checklist */}
-        <div className="space-y-3.5 mb-10">
-          {FOR_WHOM.map((text, idx) => {
-            const isChecked = checkedItems.includes(idx);
-            return (
-              <div
-                key={idx}
-                onClick={() => toggleItem(idx)}
-                className={`p-4 sm:p-5 rounded-2xl border transition-all duration-200 cursor-pointer flex items-start gap-4 ${
-                  isChecked 
-                    ? 'bg-white border-[#9E8581] shadow-sm ring-1 ring-[#9E8581]/30' 
-                    : 'bg-[#F7F2EE] border-[#E8DFD7] hover:bg-white hover:border-[#D9C7C1]'
-                }`}
-              >
-                <div 
-                  className={`w-6 h-6 rounded-lg flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
-                    isChecked 
-                      ? 'bg-[#9E8581] text-white' 
-                      : 'border-2 border-[#C9B9B2] bg-white text-transparent'
-                  }`}
-                >
-                  <Check className="w-4 h-4 stroke-[3]" />
+        {/* 2 Comparative Columns */}
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          
+          {/* Column 1: For Whom */}
+          <div className="bg-white border-2 border-[#173F38]/20 rounded-xl p-7 sm:p-8 flex flex-col justify-between shadow-xs">
+            <div className="space-y-6">
+              <div className="flex items-center gap-3 pb-4 border-b border-[#F1E6D7]">
+                <div className="w-8 h-8 rounded-full bg-[#173F38] text-white flex items-center justify-center shrink-0">
+                  <Check className="w-4 h-4 text-[#D3A84F]" />
                 </div>
-
-                <div className="flex-1">
-                  <p className={`text-sm sm:text-base leading-relaxed ${isChecked ? 'text-[#2C2420] font-semibold' : 'text-[#5E514B]'}`}>
-                    {text}
-                  </p>
+                <div>
+                  <h3 className="font-serif-title text-xl text-[#173F38] font-semibold">
+                    Este mini-curso É para você que:
+                  </h3>
+                  <span className="text-xs text-[#596561]">Deseja profundidade, leveza e frutos práticos</span>
                 </div>
               </div>
-            );
-          })}
-        </div>
 
-        {/* Dynamic feedback banner based on selections */}
-        <div className="p-6 rounded-2xl bg-[#F4EDE7] border border-[#E3D4CA] text-center flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-left">
-            <p className="text-xs font-bold text-[#8E6D68] uppercase tracking-wider flex items-center gap-1.5 mb-1">
-              <Heart className="w-3.5 h-3.5 fill-[#8E6D68]" />
-              <span>Você marcou {checkedItems.length} de {FOR_WHOM.length} situações</span>
-            </p>
-            <p className="text-sm sm:text-base text-[#2C2420] font-medium">
-              {checkedItems.length >= 1 
-                ? 'Você está no lugar certo. Este método de 2 horas foi desenhado especificamente para destravar você.' 
-                : 'Clique nos itens acima que você já sentiu ao tentar ler um livro.'}
-            </p>
+              <ul className="space-y-4">
+                {FOR_WHOM_ITEMS.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3 text-sm text-[#222725] leading-relaxed">
+                    <Check className="w-4 h-4 text-[#173F38] mt-0.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-8 pt-4 border-t border-[#F1E6D7]">
+              <a
+                href={BRAND_INFO.eduzzUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center py-3 px-5 rounded-md bg-[#C56F4D] hover:bg-[#A95636] text-white font-semibold text-sm transition-colors text-center"
+              >
+                Sim, é exatamente isso que procuro
+              </a>
+            </div>
           </div>
 
-          <button
-            onClick={onOpenCheckout}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#9E8581] hover:bg-[#886F6B] text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-md transition-all shrink-0 active:scale-95"
-          >
-            <span>Quero Destravar Minha Leitura (R$ 27)</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
+          {/* Column 2: NOT For Whom */}
+          <div className="bg-[#FAF7F2] border border-[#F1E6D7] rounded-xl p-7 sm:p-8 flex flex-col justify-between">
+            <div className="space-y-6">
+              <div className="flex items-center gap-3 pb-4 border-b border-[#F1E6D7]">
+                <div className="w-8 h-8 rounded-full bg-[#8A9692]/20 text-[#596561] flex items-center justify-center shrink-0">
+                  <X className="w-4 h-4" />
+                </div>
+                <div>
+                  <h3 className="font-serif-title text-xl text-[#596561] font-semibold">
+                    Este mini-curso NÃO é para quem:
+                  </h3>
+                  <span className="text-xs text-[#8A9692]">Busca métricas superficiais ou fórmulas automáticas</span>
+                </div>
+              </div>
+
+              <ul className="space-y-4">
+                {NOT_FOR_WHOM_ITEMS.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3 text-sm text-[#596561] leading-relaxed">
+                    <X className="w-4 h-4 text-[#8A9692] mt-0.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-8 pt-4 border-t border-[#F1E6D7] text-xs text-[#8A9692] italic text-center">
+              Nosso compromisso é com a maturidade e a reflexão bíblica genuína.
+            </div>
+          </div>
+
         </div>
 
       </div>

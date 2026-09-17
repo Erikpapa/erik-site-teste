@@ -8,12 +8,10 @@ export interface CourseModule {
   highlights: string[];
 }
 
-export interface BonusItem {
+export interface KitItem {
   id: number;
-  tag: string;
   title: string;
   format: string;
-  originalPrice: string;
   description: string;
   iconName: string;
 }
@@ -23,19 +21,10 @@ export interface FaqItem {
   answer: string;
 }
 
-export interface SocialNotification {
-  id: string;
-  name: string;
-  city: string;
-  timeAgo: string;
-  action: string;
-}
-
-export interface OrderBump {
-  id: string;
+export interface MethodPillar {
+  number: string;
   title: string;
-  price: number;
-  originalPrice: number;
+  subtitle: string;
   description: string;
-  selected: boolean;
+  practice: string;
 }

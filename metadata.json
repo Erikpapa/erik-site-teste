@@ -1,6 +1,6 @@
 {
-  "name": "Leitura Cristã Que Transforma",
-  "description": "Página de alta conversão para o mini-curso Leitura Cristã Que Transforma (Filipenses Quatro Oito), com checkout otimizado para conversão rápida de low ticket.",
+  "name": "Vereda & Página",
+  "description": "Da Página à Vida: mini-curso prático da Vereda & Página para compreender, registrar e aplicar à vida aquilo que você lê.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
