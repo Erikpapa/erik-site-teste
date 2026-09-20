@@ -43,7 +43,7 @@ export const KitVeredaSection: React.FC = () => {
               <div className="absolute -inset-2 bg-[#DFD0BC]/60 rounded-2xl rotate-1 pointer-events-none"></div>
               <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg border-4 border-white">
                 <img
-                  src="/images/materiais-da-pagina-a-vida.webp"
+                  src={`${import.meta.env.BASE_URL}images/materiais-da-pagina-a-vida.webp`}
                   alt="Materiais complementares do Kit Vereda de Aplicação organizados sobre uma mesa"
                   className="w-full h-auto object-cover aspect-[4/3] lg:aspect-[4/4]"
                   loading="lazy"

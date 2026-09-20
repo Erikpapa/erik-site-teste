@@ -54,7 +54,7 @@ export const CurriculumSection: React.FC = () => {
               <div className="absolute -inset-2 bg-[#F1E6D7]/70 rounded-2xl -rotate-1 pointer-events-none"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
                 <img
-                  src="/images/curso-da-pagina-a-vida.webp"
+                  src={`${import.meta.env.BASE_URL}images/curso-da-pagina-a-vida.webp`}
                   alt="Tablet com uma aula do mini-curso organizada sobre uma mesa"
                   className="w-full h-auto object-cover aspect-[16/10]"
                   loading="lazy"

@@ -130,7 +130,7 @@ export const PricingSection: React.FC = () => {
                   <div className="absolute -inset-2 bg-[#F1E6D7]/80 rounded-2xl -rotate-1 pointer-events-none"></div>
                   <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg border-4 border-white">
                     <img
-                      src="/images/cta-final-vereda-pagina.webp"
+                      src={`${import.meta.env.BASE_URL}images/cta-final-vereda-pagina.webp`}
                       alt="Mulher lendo com tranquilidade perto de uma janela"
                       className="w-full h-auto object-cover aspect-[4/3] lg:aspect-[4/5]"
                       loading="lazy"

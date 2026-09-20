@@ -16,7 +16,7 @@ export const ProblemSection: React.FC = () => {
               <div className="absolute -inset-2 bg-[#F1E6D7]/70 rounded-2xl rotate-1 pointer-events-none"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
                 <img
-                  src="/images/reflexao-leitura-vereda.webp"
+                  src={`${import.meta.env.BASE_URL}images/reflexao-leitura-vereda.webp`}
                   alt="Mulher refletindo durante um momento de leitura e anotações"
                   className="w-full h-auto object-cover aspect-[4/3] sm:aspect-[4/3]"
                   loading="lazy"
