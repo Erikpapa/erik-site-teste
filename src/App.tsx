@@ -1,48 +1,57 @@
 import React from 'react';
-import { AnnouncementBar } from './components/AnnouncementBar';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { ProblemSection } from './components/ProblemSection';
-import { WhatYouLearnSection } from './components/WhatYouLearnSection';
+import { MethodSection } from './components/MethodSection';
 import { OrnamentDivider } from './components/OrnamentDivider';
+import { ProductSection } from './components/ProductSection';
+import { TheologySection } from './components/TheologySection';
 import { ForWhomSection } from './components/ForWhomSection';
-import { CurriculumSection } from './components/CurriculumSection';
-import { KitVeredaSection } from './components/KitVeredaSection';
-import { AboutCourseSection } from './components/AboutCourseSection';
-import { PricingSection } from './components/PricingSection';
-import { GuaranteeSection } from './components/GuaranteeSection';
+import { OfferSection } from './components/OfferSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { StickyBottomBar } from './components/StickyBottomBar';
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FFF9F0] text-[#222725] font-sans antialiased selection:bg-[#173F38] selection:text-[#FFF9F0]">
-      {/* Editorial Announcement Bar */}
-      <AnnouncementBar />
-
-      {/* Main Brand Navigation Header */}
+    <div className="min-h-screen flex flex-col bg-[#FFF9F0] text-[#222725] font-sans antialiased selection:bg-[#173F38] selection:text-[#FFF9F0] overflow-x-hidden">
+      {/* Brand Navigation Bar */}
       <Navbar />
 
-      {/* Sales & Method Page Sections */}
+      {/* Main Content strictly following the 9 requested sections */}
       <main className="flex-1">
+        {/* 1. Hero com promessa principal e botão */}
         <HeroSection />
+
+        {/* 2. Problema da leitora */}
         <ProblemSection />
-        <WhatYouLearnSection />
+
+        {/* 3. Método em três movimentos */}
+        <MethodSection />
+
+        {/* Delicate transition divider */}
         <OrnamentDivider />
+
+        {/* 4. Apresentação do Guia + Caderno */}
+        <ProductSection />
+
+        {/* 5. Embasamento teológico */}
+        <TheologySection />
+
+        {/* 6. Para quem é */}
         <ForWhomSection />
-        <CurriculumSection />
-        <AboutCourseSection />
-        <KitVeredaSection />
-        <PricingSection />
-        <GuaranteeSection />
+
+        {/* 7. Oferta de R$ 27,90 */}
+        <OfferSection />
+
+        {/* 8. Perguntas frequentes */}
         <FaqSection />
       </main>
 
-      {/* Official Brand Footer */}
+      {/* 9. Rodapé */}
       <Footer />
 
-      {/* Non-intrusive Sticky Bottom CTA Bar */}
+      {/* Non-intrusive Sticky Bottom Bar */}
       <StickyBottomBar />
     </div>
   );

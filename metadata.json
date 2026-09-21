@@ -1,6 +1,6 @@
 {
-  "name": "Vereda & Página",
-  "description": "Da Página à Vida: mini-curso prático da Vereda & Página para compreender, registrar e aplicar à vida aquilo que você lê.",
+  "name": "Da Página à Vida",
+  "description": "Da Página à Vida: Guia e Caderno em PDF da Vereda & Página para ler com clareza, guardar o essencial e viver o que aprendeu.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
