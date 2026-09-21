@@ -5,23 +5,10 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/erik-site-teste/',
+    base: '/',
     plugins: [
       react(),
       tailwindcss(),
-      {
-        name: 'dev-root-fallback',
-        configureServer(server) {
-          server.middlewares.use((req, _res, next) => {
-            if (req.url === '/' || req.url === '/index.html') {
-              req.url = '/erik-site-teste/';
-            } else if (req.url?.startsWith('/images/')) {
-              req.url = '/erik-site-teste' + req.url;
-            }
-            next();
-          });
-        },
-      },
     ],
     resolve: {
       alias: {
