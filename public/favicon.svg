@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="512" height="512" rx="100" fill="#173F38"/>
+
+  <!-- Open Book Base -->
+  <g fill="#D3A84F">
+    <!-- Left page -->
+    <path d="M 234 388 C 172 356 114 362 76 378 C 66 382 56 374 56 362 L 56 268 C 56 258 64 250 74 246 C 118 228 178 224 234 254 C 242 258 246 266 246 274 L 246 376 C 246 386 238 390 234 388 Z"/>
+    
+    <!-- Right page -->
+    <path d="M 278 388 C 340 356 398 362 436 378 C 446 382 456 374 456 362 L 456 268 C 456 258 448 250 438 246 C 394 228 334 224 278 254 C 270 258 266 266 266 274 L 266 376 C 266 386 274 390 278 388 Z"/>
+  </g>
+
+  <!-- Subtle Page Accent Lines -->
+  <g stroke="#FFF9F0" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.85">
+    <path d="M 94 286 C 136 272 186 270 226 290"/>
+    <path d="M 94 322 C 136 308 186 306 226 326"/>
+    <path d="M 418 286 C 376 272 326 270 286 290"/>
+    <path d="M 418 322 C 376 308 326 306 286 326"/>
+  </g>
+
+  <!-- Sprouting Central Leaf -->
+  <path
+    d="M 256 80 C 330 144 346 230 268 300 C 262 305 250 305 244 300 C 166 230 182 144 256 80 Z"
+    fill="#D3A84F"
+  />
+
+  <!-- Leaf Central Spine -->
+  <path
+    d="M 256 112 L 256 294"
+    stroke="#173F38"
+    stroke-width="16"
+    stroke-linecap="round"
+  />
+
+  <!-- Center spine accent dot -->
+  <circle cx="256" cy="386" r="12" fill="#D3A84F"/>
+</svg>
