@@ -4,7 +4,6 @@ import { BRAND_INFO, getCaktoCheckoutUrl } from '../data/courseData';
 
 export const Footer: React.FC = () => {
   const checkoutUrl = getCaktoCheckoutUrl();
-  const isExternal = checkoutUrl.startsWith('http');
 
   return (
     <footer className="bg-[#173F38] text-[#FFF9F0] pt-14 pb-24 sm:pb-16 border-t border-[#102C27]">
@@ -36,8 +35,6 @@ export const Footer: React.FC = () => {
             </a>
             <a
               href={checkoutUrl}
-              target={isExternal ? '_blank' : undefined}
-              rel={isExternal ? 'noopener noreferrer' : undefined}
               className="hover:text-white transition-colors underline underline-offset-4 text-[#D3A84F]"
             >
               Checkout oficial Cakto

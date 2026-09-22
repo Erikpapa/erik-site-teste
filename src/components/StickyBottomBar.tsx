@@ -5,7 +5,6 @@ import { ArrowRight, BookOpen } from 'lucide-react';
 export const StickyBottomBar: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const checkoutUrl = getCaktoCheckoutUrl();
-  const isExternal = checkoutUrl.startsWith('http');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,8 +54,6 @@ export const StickyBottomBar: React.FC = () => {
 
           <a
             href={checkoutUrl}
-            target={isExternal ? '_blank' : undefined}
-            rel={isExternal ? 'noopener noreferrer' : undefined}
             className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-[#C56F4D] hover:bg-[#A95636] text-white text-xs sm:text-sm font-semibold transition-colors shadow-sm shrink-0 group"
           >
             <span>Quero os dois PDFs</span>

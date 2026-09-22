@@ -5,7 +5,6 @@ import { SafeImage } from './SafeImage';
 
 export const OfferSection: React.FC = () => {
   const checkoutUrl = getCaktoCheckoutUrl();
-  const isExternal = checkoutUrl.startsWith('http');
 
   return (
     <section id="oferta" className="py-16 sm:py-24 bg-[#FFF9F0] border-b border-[#F1E6D7] scroll-mt-10">
@@ -71,8 +70,6 @@ export const OfferSection: React.FC = () => {
               <div className="space-y-2 pt-2">
                 <a
                   href={checkoutUrl}
-                  target={isExternal ? '_blank' : undefined}
-                  rel={isExternal ? 'noopener noreferrer' : undefined}
                   className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-md bg-[#C56F4D] hover:bg-[#A95636] text-white font-semibold text-base shadow-md transition-all group"
                 >
                   <span>Quero receber os dois PDFs</span>

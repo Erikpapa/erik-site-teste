@@ -15,12 +15,14 @@ export const BRAND_INFO = {
   supportEmail: "contato@veredaepagina.com.br",
 };
 
+export const CAKTO_CHECKOUT_URL = "https://pay.cakto.com.br/ni7jvkp_1127223";
+
 export const getCaktoCheckoutUrl = (): string => {
   const envUrl = import.meta.env.VITE_CAKTO_CHECKOUT_URL;
   if (envUrl && typeof envUrl === 'string' && envUrl.trim().length > 0) {
     return envUrl.trim();
   }
-  return "#oferta";
+  return CAKTO_CHECKOUT_URL;
 };
 
 export const IMAGES = {

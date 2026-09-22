@@ -5,7 +5,6 @@ import { SafeImage } from './SafeImage';
 
 export const HeroSection: React.FC = () => {
   const checkoutUrl = getCaktoCheckoutUrl();
-  const isExternal = checkoutUrl.startsWith('http');
 
   return (
     <section className="relative pt-12 pb-16 sm:pt-16 sm:pb-24 overflow-hidden bg-gradient-to-b from-[#FFF9F0] via-[#FFF9F0] to-[#F1E6D7]/40 border-b border-[#F1E6D7]">
@@ -68,8 +67,6 @@ export const HeroSection: React.FC = () => {
         <div className="pt-8 space-y-3">
           <a
             href={checkoutUrl}
-            target={isExternal ? '_blank' : undefined}
-            rel={isExternal ? 'noopener noreferrer' : undefined}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-md bg-[#C56F4D] hover:bg-[#A95636] text-white font-semibold text-base shadow-md transition-all group"
           >
             <span>Quero o Guia + Caderno</span>

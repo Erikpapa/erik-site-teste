@@ -4,7 +4,6 @@ import { BRAND_INFO, getCaktoCheckoutUrl } from '../data/courseData';
 
 export const Navbar: React.FC = () => {
   const checkoutUrl = getCaktoCheckoutUrl();
-  const isExternal = checkoutUrl.startsWith('http');
 
   return (
     <header className="sticky top-0 z-40 bg-[#FFF9F0]/95 backdrop-blur-md border-b border-[#F1E6D7] transition-all">
@@ -29,8 +28,6 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center gap-3">
           <a
             href={checkoutUrl}
-            target={isExternal ? '_blank' : undefined}
-            rel={isExternal ? 'noopener noreferrer' : undefined}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#173F38] text-[#FFF9F0] text-xs sm:text-sm font-semibold hover:bg-[#102C27] transition-colors shadow-xs"
           >
             <span>Quero o Guia + Caderno</span>
