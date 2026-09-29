@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
 interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  fallbackSrc: string;
+  fallbackSrc?: string;
   width: number | string;
   height: number | string;
+  fetchPriority?: 'high' | 'low' | 'auto';
 }
 
 export const SafeImage: React.FC<SafeImageProps> = ({
@@ -14,6 +15,7 @@ export const SafeImage: React.FC<SafeImageProps> = ({
   height,
   className,
   loading = 'lazy',
+  fetchPriority,
   ...props
 }) => {
   const [currentSrc, setCurrentSrc] = useState<string | undefined>(src);
@@ -27,10 +29,11 @@ export const SafeImage: React.FC<SafeImageProps> = ({
       height={height}
       className={className}
       loading={loading}
+      fetchPriority={fetchPriority}
       decoding="async"
       referrerPolicy="no-referrer"
       onError={() => {
-        if (!hasError && currentSrc !== fallbackSrc) {
+        if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
           setHasError(true);
           setCurrentSrc(fallbackSrc);
         }

@@ -4,24 +4,19 @@
   --font-serif: 'Fraunces', Georgia, serif;
   --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
   
-  --color-vereda-green: #173F38;
-  --color-vereda-green-dark: #102C27;
-  --color-vereda-green-light: #20554C;
-  --color-vereda-terracotta: #C56F4D;
-  --color-vereda-terracotta-dark: #A95636;
-  --color-vereda-terracotta-light: #DE8664;
-  --color-vereda-ivory: #FFF9F0;
-  --color-vereda-sand: #F1E6D7;
-  --color-vereda-sand-dark: #DFD0BC;
-  --color-vereda-gold: #D3A84F;
-  --color-vereda-charcoal: #222725;
-  --color-vereda-muted: #596561;
+  --color-vereda-green: #0C382E;
+  --color-vereda-green-dark: #072B23;
+  --color-vereda-green-light: #164E41;
+  --color-vereda-gold: #C58B35;
+  --color-vereda-gold-light: #D4A359;
+  --color-vereda-ivory: #FCFAF6;
+  --color-vereda-muted: #485B55;
 }
 
 html {
   scroll-behavior: smooth;
   font-family: 'Manrope', system-ui, -apple-system, sans-serif;
-  background-color: #FFF9F0;
+  background-color: #FCFAF6;
   color: #222725;
 }
 
@@ -30,8 +25,7 @@ html {
   font-optical-sizing: auto;
 }
 
-/* Editorial subtle styling */
 ::selection {
-  background-color: #173F38;
-  color: #FFF9F0;
+  background-color: #0C382E;
+  color: #FFFDF9;
 }
