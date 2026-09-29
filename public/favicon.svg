@@ -1,38 +1,167 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
-  <!-- Background -->
-  <rect width="512" height="512" rx="100" fill="#173F38"/>
+  <defs>
+    <!-- Rich Golden Gradients matching user icon -->
+    <linearGradient id="stemGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#9C6219"/>
+      <stop offset="60%" stop-color="#C58B35"/>
+      <stop offset="100%" stop-color="#DCA84E"/>
+    </linearGradient>
 
-  <!-- Open Book Base -->
-  <g fill="#D3A84F">
-    <!-- Left page -->
-    <path d="M 234 388 C 172 356 114 362 76 378 C 66 382 56 374 56 362 L 56 268 C 56 258 64 250 74 246 C 118 228 178 224 234 254 C 242 258 246 266 246 274 L 246 376 C 246 386 238 390 234 388 Z"/>
+    <linearGradient id="grainGradL" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B87B22"/>
+      <stop offset="50%" stop-color="#DCA84E"/>
+      <stop offset="100%" stop-color="#EED08A"/>
+    </linearGradient>
+
+    <linearGradient id="grainGradR" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#B87B22"/>
+      <stop offset="50%" stop-color="#DCA84E"/>
+      <stop offset="100%" stop-color="#EED08A"/>
+    </linearGradient>
+  </defs>
+
+  <g id="wheat-icon" transform="translate(15, 8) scale(0.94)">
+    <!-- Main stem curving gracefully -->
+    <path d="M 215 488 C 248 425 264 365 272 270 C 275 220 276 160 274 72" 
+          fill="none" stroke="url(#stemGrad)" stroke-width="7" stroke-linecap="round"/>
     
-    <!-- Right page -->
-    <path d="M 278 388 C 340 356 398 362 436 378 C 446 382 456 374 456 362 L 456 268 C 456 258 448 250 438 246 C 394 228 334 224 278 254 C 270 258 266 266 266 274 L 266 376 C 266 386 274 390 278 388 Z"/>
+    <!-- Secondary stem shadow / inner line -->
+    <path d="M 216 486 C 246 426 261 368 269 275" 
+          fill="none" stroke="#7A440A" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Left lower leaf blade with botanical ribbing -->
+    <g id="leaf-left">
+      <!-- Leaf body -->
+      <path d="M 242 430 C 205 385 168 335 174 290 C 188 318 214 362 250 398 Z" 
+            fill="url(#grainGradL)" stroke="#8C520E" stroke-width="2.5" stroke-linejoin="round"/>
+      <!-- Leaf internal ribbing lines -->
+      <path d="M 238 420 C 208 375 184 332 178 300" fill="none" stroke="#8C520E" stroke-width="1.8" opacity="0.75"/>
+      <path d="M 228 395 C 205 365 190 338 185 315" fill="none" stroke="#8C520E" stroke-width="1.2" opacity="0.6"/>
+      <path d="M 216 370 C 200 348 192 332 189 322" fill="none" stroke="#8C520E" stroke-width="1" opacity="0.5"/>
+    </g>
+
+    <!-- Right lower leaf blade -->
+    <g id="leaf-right">
+      <path d="M 252 418 C 276 388 308 360 334 352 C 320 372 292 398 262 426 Z" 
+            fill="url(#grainGradR)" stroke="#8C520E" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M 258 412 C 280 384 308 362 328 356" fill="none" stroke="#8C520E" stroke-width="1.5" opacity="0.7"/>
+      <path d="M 268 402 C 286 382 305 368 318 362" fill="none" stroke="#8C520E" stroke-width="1" opacity="0.5"/>
+    </g>
+
+    <!-- AWNS (Arestas / Cerdas do trigo que se projetam para cima e para fora) -->
+    <g id="awns" stroke="#9C6219" stroke-width="2.2" stroke-linecap="round" fill="none">
+      <!-- Lower awns -->
+      <path d="M 252 322 C 220 280 198 225 186 168" />
+      <path d="M 292 308 C 322 268 344 212 354 154" />
+      <path d="M 248 286 C 218 244 196 190 188 135" />
+      <path d="M 295 272 C 326 230 350 176 358 120" />
+      
+      <!-- Middle awns -->
+      <path d="M 248 248 C 218 206 200 152 195 95" stroke-width="2.4"/>
+      <path d="M 296 235 C 326 195 348 142 352 86" stroke-width="2.4"/>
+      <path d="M 252 210 C 226 168 212 118 208 62" stroke-width="2.4"/>
+      <path d="M 294 198 C 322 158 342 108 344 54" stroke-width="2.4"/>
+      
+      <!-- Upper awns -->
+      <path d="M 256 172 C 234 130 224 82 222 32" stroke-width="2.2"/>
+      <path d="M 290 162 C 316 122 330 76 332 26" stroke-width="2.2"/>
+      <path d="M 262 136 C 246 96 238 56 238 16" stroke-width="2"/>
+      <path d="M 286 128 C 306 88 316 48 318 14" stroke-width="2"/>
+      
+      <!-- Topmost central awns -->
+      <path d="M 268 98 C 262 65 258 36 256 8" stroke-width="2.2"/>
+      <path d="M 274 72 L 273 4" stroke-width="2.5"/>
+      <path d="M 280 96 C 286 64 290 35 292 8" stroke-width="2.2"/>
+    </g>
+
+    <!-- WHEAT GRAINS / KERNELS (Espiguetas e grãos texturizados) -->
+    <!-- Grain Pair 1 (Bottom) -->
+    <g id="grain-1L">
+      <path d="M 264 340 C 244 336 234 316 242 298 C 252 294 266 304 270 324 Z" 
+            fill="url(#grainGradL)" stroke="#8C520E" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M 248 304 C 252 312 258 322 266 332" fill="none" stroke="#8C520E" stroke-width="1.3" opacity="0.6"/>
+      <path d="M 244 312 C 248 318 254 326 262 334" fill="none" stroke="#8C520E" stroke-width="1" opacity="0.5"/>
+    </g>
+    <g id="grain-1R">
+      <path d="M 274 330 C 294 324 306 306 298 288 C 288 284 274 294 268 314 Z" 
+            fill="url(#grainGradR)" stroke="#8C520E" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M 292 294 C 288 302 282 312 274 322" fill="none" stroke="#8C520E" stroke-width="1.3" opacity="0.6"/>
+      <path d="M 296 302 C 292 308 286 316 278 324" fill="none" stroke="#8C520E" stroke-width="1" opacity="0.5"/>
+    </g>
+
+    <!-- Grain Pair 2 -->
+    <g id="grain-2L">
+      <path d="M 266 302 C 242 296 232 274 242 254 C 254 250 268 262 272 284 Z" 
+            fill="url(#grainGradL)" stroke="#8C520E" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M 248 260 C 254 270 260 282 268 294" fill="none" stroke="#8C520E" stroke-width="1.4" opacity="0.6"/>
+      <path d="M 244 268 C 250 276 256 286 264 296" fill="none" stroke="#8C520E" stroke-width="1" opacity="0.5"/>
+    </g>
+    <g id="grain-2R">
+      <path d="M 276 292 C 298 284 310 264 300 244 C 288 240 274 252 268 274 Z" 
+            fill="url(#grainGradR)" stroke="#8C520E" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M 294 250 C 288 260 282 272 274 284" fill="none" stroke="#8C520E" stroke-width="1.4" opacity="0.6"/>
+      <path d="M 298 258 C 292 266 286 276 278 286" fill="none" stroke="#8C520E" stroke-width="1" opacity="0.5"/>
+    </g>
+
+    <!-- Grain Pair 3 -->
+    <g id="grain-3L">
+      <path d="M 268 264 C 242 256 230 232 242 210 C 256 206 270 220 274 244 Z" 
+            fill="url(#grainGradL)" stroke="#8C520E" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M 248 218 C 254 230 262 244 270 256" fill="none" stroke="#8C520E" stroke-width="1.5" opacity="0.65"/>
+      <path d="M 244 226 C 250 236 258 248 266 258" fill="none" stroke="#8C520E" stroke-width="1.1" opacity="0.5"/>
+    </g>
+    <g id="grain-3R">
+      <path d="M 276 254 C 302 244 314 222 302 200 C 288 196 274 210 268 234 Z" 
+            fill="url(#grainGradR)" stroke="#8C520E" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M 296 208 C 288 220 280 234 272 246" fill="none" stroke="#8C520E" stroke-width="1.5" opacity="0.65"/>
+      <path d="M 300 216 C 292 226 284 238 276 248" fill="none" stroke="#8C520E" stroke-width="1.1" opacity="0.5"/>
+    </g>
+
+    <!-- Grain Pair 4 -->
+    <g id="grain-4L">
+      <path d="M 270 224 C 244 216 232 190 244 168 C 258 164 272 178 276 204 Z" 
+            fill="url(#grainGradL)" stroke="#8C520E" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M 250 176 C 256 188 264 204 272 216" fill="none" stroke="#8C520E" stroke-width="1.5" opacity="0.65"/>
+      <path d="M 246 184 C 252 194 260 206 268 218" fill="none" stroke="#8C520E" stroke-width="1.1" opacity="0.5"/>
+    </g>
+    <g id="grain-4R">
+      <path d="M 276 214 C 302 204 314 180 302 158 C 288 154 274 168 268 194 Z" 
+            fill="url(#grainGradR)" stroke="#8C520E" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M 296 166 C 288 178 280 194 272 206" fill="none" stroke="#8C520E" stroke-width="1.5" opacity="0.65"/>
+      <path d="M 300 174 C 292 184 284 196 276 208" fill="none" stroke="#8C520E" stroke-width="1.1" opacity="0.5"/>
+    </g>
+
+    <!-- Grain Pair 5 -->
+    <g id="grain-5L">
+      <path d="M 270 184 C 246 174 236 150 248 128 C 260 124 274 138 276 164 Z" 
+            fill="url(#grainGradL)" stroke="#8C520E" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M 254 136 C 260 148 266 162 272 174" fill="none" stroke="#8C520E" stroke-width="1.4" opacity="0.6"/>
+      <path d="M 250 144 C 256 154 262 164 268 176" fill="none" stroke="#8C520E" stroke-width="1" opacity="0.5"/>
+    </g>
+    <g id="grain-5R">
+      <path d="M 276 174 C 300 164 310 140 298 118 C 286 114 274 128 270 154 Z" 
+            fill="url(#grainGradR)" stroke="#8C520E" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M 292 126 C 286 138 280 152 274 164" fill="none" stroke="#8C520E" stroke-width="1.4" opacity="0.6"/>
+      <path d="M 296 134 C 290 144 284 154 278 166" fill="none" stroke="#8C520E" stroke-width="1" opacity="0.5"/>
+    </g>
+
+    <!-- Grain Pair 6 (Top pair) -->
+    <g id="grain-6L">
+      <path d="M 272 144 C 252 134 244 114 254 94 C 264 90 274 102 276 124 Z" 
+            fill="url(#grainGradL)" stroke="#8C520E" stroke-width="2.3" stroke-linejoin="round"/>
+      <path d="M 258 102 C 264 112 268 124 272 134" fill="none" stroke="#8C520E" stroke-width="1.2" opacity="0.6"/>
+    </g>
+    <g id="grain-6R">
+      <path d="M 276 136 C 296 126 304 106 294 86 C 284 82 274 94 272 116 Z" 
+            fill="url(#grainGradR)" stroke="#8C520E" stroke-width="2.3" stroke-linejoin="round"/>
+      <path d="M 288 94 C 284 104 278 116 274 126" fill="none" stroke="#8C520E" stroke-width="1.2" opacity="0.6"/>
+    </g>
+
+    <!-- Central Top Grain (Apex) -->
+    <g id="grain-top">
+      <path d="M 270 110 C 262 90 265 68 274 52 C 283 68 286 90 278 110 Z" 
+            fill="url(#grainGradL)" stroke="#8C520E" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M 274 58 L 274 104" fill="none" stroke="#8C520E" stroke-width="1.3" opacity="0.7"/>
+    </g>
   </g>
-
-  <!-- Subtle Page Accent Lines -->
-  <g stroke="#FFF9F0" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.85">
-    <path d="M 94 286 C 136 272 186 270 226 290"/>
-    <path d="M 94 322 C 136 308 186 306 226 326"/>
-    <path d="M 418 286 C 376 272 326 270 286 290"/>
-    <path d="M 418 322 C 376 308 326 306 286 326"/>
-  </g>
-
-  <!-- Sprouting Central Leaf -->
-  <path
-    d="M 256 80 C 330 144 346 230 268 300 C 262 305 250 305 244 300 C 166 230 182 144 256 80 Z"
-    fill="#D3A84F"
-  />
-
-  <!-- Leaf Central Spine -->
-  <path
-    d="M 256 112 L 256 294"
-    stroke="#173F38"
-    stroke-width="16"
-    stroke-linecap="round"
-  />
-
-  <!-- Center spine accent dot -->
-  <circle cx="256" cy="386" r="12" fill="#D3A84F"/>
 </svg>
