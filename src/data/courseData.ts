@@ -1,66 +1,46 @@
 export const BRAND_INFO = {
-  brandName: "Vereda & Página",
-  productName: "Da Página à Vida",
-  format: "Guia + caderno prático em PDF",
-  totalPages: 52,
-  guidePages: 26,
-  notebookPages: 26,
-  priceFormatted: "R$ 27,90",
-  priceNumeric: 27.90,
-  paymentType: "Pagamento único",
-  processor: "Cakto",
-  supportEmail: "contato@veredaepagina.com.br",
+  brandName: 'Vereda & Página',
+  productName: 'Da Página à Vida',
+  format: 'Guia + caderno prático em PDF',
+  priceFormatted: 'R$ 27,90',
+  paymentType: 'Pagamento único',
 };
 
-export const CAKTO_CHECKOUT_URL = "https://pay.cakto.com.br/ni7jvkp_1127223";
+// Checkout aprovado: uma variável antiga de publicação não deve apontar
+// os compradores para outra oferta.
+export const CAKTO_CHECKOUT_URL = 'https://pay.cakto.com.br/ni7jvkp_1127223';
+export const getCaktoCheckoutUrl = () => CAKTO_CHECKOUT_URL;
+export const CHECKOUT_LABEL = 'Quero começar minha leitura com mais clareza';
 
-export const getCaktoCheckoutUrl = (): string => {
-  const envUrl = import.meta.env.VITE_CAKTO_CHECKOUT_URL;
-  if (envUrl && typeof envUrl === 'string' && envUrl.trim().length > 0) {
-    return envUrl.trim();
-  }
-  return CAKTO_CHECKOUT_URL;
-};
-
-// Imagens reais salvas em public/images
+const imagePath = (filename: string) => `${import.meta.env.BASE_URL}images/${filename}`;
 export const APPROVED_IMAGES = {
   hero: {
-    src: `${import.meta.env.BASE_URL}images/hero-approved.webp`,
-    fallback: "https://i.imgur.com/XstOBg3.jpeg",
-    alt: "Mulher estudando e escrevendo ao lado da Bíblia aberta",
-    width: 1536,
-    height: 1024,
-  },
-  bibleDetail: {
-    src: `${import.meta.env.BASE_URL}images/bible-detail.webp`,
-    fallback: "https://i.imgur.com/wDs9PIA.jpeg",
-    alt: "Pequeno detalhe de mãos sobre a Bíblia aberta (sem tablet)",
-    width: 1024,
-    height: 1536,
+    src: imagePath('hero-com-biblia.png'),
+    alt: 'Mulher escrevendo ao lado da Bíblia aberta, com um detalhe da Bíblia no canto da foto',
+    width: 590,
+    height: 271,
   },
   reading: {
-    src: `${import.meta.env.BASE_URL}images/reading-approved.webp`,
-    fallback: "https://i.imgur.com/EhO3GGF.jpeg",
-    alt: "Leitura da Bíblia à luz da janela com xícara de café",
-    width: 1376,
-    height: 768,
+    src: imagePath('leitura-biblia.png'),
+    alt: 'Mulher lendo a Bíblia à mesa, perto da janela',
+    width: 600,
+    height: 173,
   },
   covers: {
-    src: `${import.meta.env.BASE_URL}images/covers-approved.webp`,
-    fallback: `${import.meta.env.BASE_URL}images/covers-approved.webp`,
-    alt: "Capas impressas com ramos de trigo do Guia Da Página à Vida e Caderno Prático",
-    width: 1200,
-    height: 896,
+    src: imagePath('capas-guia-caderno.png'),
+    alt: 'Capas ilustrativas do guia Da Página à Vida e do Caderno Prático em PDF',
+    width: 279,
+    height: 211,
   },
 };
 
 export const FAQS = [
   {
-    question: "O que vou receber?",
-    answer: "Você recebe o material digital completo em PDF (52 páginas ao todo): o Guia de Leitura (26 páginas) com o método em 3 movimentos e jornada de 21 dias, acompanhado do Caderno Prático (26 páginas) para registrar dúvidas, orações e aplicações no cotidiano.",
+    question: 'O que vou receber?',
+    answer: 'Um guia de leitura e um caderno prático, ambos em PDF, para apoiar suas leituras, dúvidas e reflexões.',
   },
   {
-    question: "Como recebo o material?",
-    answer: "A entrega é 100% digital e imediata. Assim que o pagamento for aprovado pela Cakto, você recebe no seu e-mail cadastrado as instruções e o link seguro para download imediato dos arquivos em PDF no celular, tablet ou computador.",
+    question: 'Como recebo o material?',
+    answer: 'Após a aprovação do pagamento, siga as orientações de acesso disponibilizadas pela plataforma de compra.',
   },
 ];
