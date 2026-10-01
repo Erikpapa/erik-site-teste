@@ -1,6 +1,7 @@
 import { ArrowRight, FileText } from 'lucide-react';
 import { APPROVED_IMAGES, BRAND_INFO, CHECKOUT_LABEL, getCaktoCheckoutUrl } from '../data/courseData';
 import { VeredaWheat } from './VeredaWheat';
+import { trackAddToCart } from '../lib/metaPixel';
 
 export function SectionOpening() {
   const checkoutUrl = getCaktoCheckoutUrl();
@@ -25,7 +26,7 @@ export function SectionOpening() {
             <p>Lê um versículo. Volta. Lê de novo. As palavras estão ali. Você quer entender. Mas não consegue ligar o que está escrito ao que está vivendo.</p>
             <blockquote>“Deus, eu quero me aproximar de Ti… mas não sei por onde começar.”</blockquote>
             <p className="lead">Comece com orientação, uma passagem e um próximo passo de cada vez.</p>
-            <a className="btn cta" href={checkoutUrl} data-checkout>
+            <a className="btn cta" href={checkoutUrl} data-checkout onClick={trackAddToCart}>
               {CHECKOUT_LABEL} <ArrowRight size={18} aria-hidden="true" />
             </a>
             <p className="price"><FileText size={18} aria-hidden="true" /> Guia + caderno prático em PDF • <strong>{BRAND_INFO.priceFormatted}</strong></p>

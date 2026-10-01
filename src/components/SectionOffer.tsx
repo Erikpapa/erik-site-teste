@@ -1,6 +1,7 @@
 import { ArrowRight, FileText } from 'lucide-react';
 import { APPROVED_IMAGES, BRAND_INFO, CHECKOUT_LABEL, FAQS, getCaktoCheckoutUrl } from '../data/courseData';
 import { VeredaWheat } from './VeredaWheat';
+import { trackAddToCart } from '../lib/metaPixel';
 
 export function SectionOffer() {
   return (
@@ -20,7 +21,7 @@ export function SectionOffer() {
               </div>
               <img className="covers" {...APPROVED_IMAGES.covers} loading="lazy" decoding="async" />
             </div>
-            <a className="btn" href={getCaktoCheckoutUrl()} data-checkout>
+            <a className="btn" href={getCaktoCheckoutUrl()} data-checkout onClick={trackAddToCart}>
               {CHECKOUT_LABEL} <ArrowRight size={18} aria-hidden="true" />
             </a>
             <p className="note"><FileText size={18} aria-hidden="true" /><span>Material digital em PDF. Nenhum livro físico será enviado.</span></p>
